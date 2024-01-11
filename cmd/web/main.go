@@ -70,6 +70,7 @@ func main() {
 
 	err := app.serve()
 	if err != nil {
-		fmt.Println(err.Error())
+		app.errorLog.Println(err)
+		log.Fatal(err)
 	}
 }
